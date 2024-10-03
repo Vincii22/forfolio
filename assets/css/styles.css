@@ -3,13 +3,17 @@
     text-decoration: none;
 
 }
+
 body{
     background: #0E0E0E;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-}
+    font-family: 'Lora', serif; /* or choose any other font */
 
+}
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* for headings */
+}
 section {
     margin-top: 80px; /* Adjust based on the height of your navigation */
     padding: 10px; /* Adjust padding as needed */
@@ -24,7 +28,7 @@ section {
     transform: translateX(-50%); /* Center fix */
     background: rgba(42, 42, 42, 0.5); /* Semi-transparent background color */
     backdrop-filter: blur(10px); /* Apply blur effect */
-    border: 1px solid #DAC5A7; /* Border color */
+    box-shadow: 0 0 0 0.2px #DAC5A7; /* Simulated border effect */
     z-index: 1000; /* Ensure it's above other content */
     border-radius: 5px; /* Optional: for rounded corners */
 }
@@ -57,9 +61,6 @@ nav {
     transition: color 0.3s; /* Transition for hover */
 }
 
-.links a:hover {
-    color: #ffcc00; /* Change color on hover */
-}
 
 .nav-button a {
     background: #DAC5A7; /* Button background color */
@@ -70,10 +71,50 @@ nav {
     transition: background 0.3s; /* Transition for hover */
 }
 
-.nav-button a:hover {
-    background: #ffcc00; /* Change button background on hover */
+.links a {
+    position: relative; /* Position relative for pseudo-element */
+    color: #DAC5A7; /* Default link color */
+    text-decoration: none; /* Remove default underline */
 }
 
+.links a::after {
+    content: ""; /* Empty content for the pseudo-element */
+    display: block; /* Make it a block element */
+    width: 0; /* Initial width is 0 */
+    height: 2px; /* Height of the underline */
+    background: #DAC5A7; /* Underline color */
+    transition: width 0.4s ease; /* Animation for the width */
+    position: absolute; /* Position absolute */
+    left: 0; /* Align to the left */
+    bottom: -5px; /* Position below the text */
+}
+
+.links a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+/* For the button */
+.nav-button a {
+    position: relative; /* Position relative for pseudo-element */
+    color: #1D1E1F; /* Default button text color */
+    text-decoration: none; /* Remove default underline */
+}
+
+.nav-button a::after {
+    content: ""; /* Empty content for the pseudo-element */
+    display: block; /* Make it a block element */
+    width: 0; /* Initial width is 0 */
+    height: 2px; /* Height of the underline */
+    background: #DAC5A7; /* Underline color */
+    transition: width 0.4s ease; /* Animation for the width */
+    position: absolute; /* Position absolute */
+    left: 0; /* Align to the left */
+    bottom: -5px; /* Position below the text */
+}
+
+.nav-button a:hover::after {
+    width: 100%; /* Full width on hover */
+}
 /* Hero Section  */
 
 .hero {
@@ -127,7 +168,7 @@ nav {
 .service {
     width: 17%; /* Width of each service */
     background: rgba(218, 197, 167, 0.05); /* Background with transparency */
-    border: 1px solid #DAC5A7; /* Border color */
+    box-shadow: 0 0 0 0.2px #DAC5A7; /* Simulated border effect */
     padding: 45px; /* Inner padding */
     border-radius: 5px; /* Optional: rounded corners */
     color: #DAC5A7; /* Font color */
@@ -154,7 +195,7 @@ nav {
     width: 40px; /* Button width */
     height: 40px; /* Button height */
     background: rgba(218, 197, 167, 0.05); /* Button background */
-    border: 1px solid #DAC5A7; /* Button border color */
+    box-shadow: 0 0 0 0.2px #DAC5A7; /* Simulated border effect */
     border-radius: 50%; /* Make it circular */
     display: flex; /* Flex for icon */
     justify-content: center; /* Center icon */
@@ -177,4 +218,96 @@ nav {
 /* Change the icon position on hover */
 .service-button:hover .circle-button i {
     transform: translateX(10px); /* Move the icon right */
+}
+
+
+/* WORK SECTION  */
+
+
+.works {
+    width: 75%; /* Width of the whole section */
+    margin: 0 auto; /* Center the section */
+}
+
+.work-container {
+    display: flex;
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center content */
+    color: #DAC5A7; /* Font color for entire container */
+}
+
+.work-title {
+    display: flex; /* Flexbox for title and button */
+    justify-content: space-between; /* Space between title and button */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Full width */
+}
+
+.works-box {
+    display: flex; /* Flexbox for work items */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Space between items */
+    width: 100%; /* Full width */
+}
+
+.work {
+    width: 48%; /* Width of each work item */
+    box-shadow: 0 0 0 0.2px #DAC5A7; /* Simulated border effect */
+    background: rgba(218, 197, 167, 0.05); /* Background color */
+    margin: 10px 0; /* Space between rows */
+    position: relative; /* Positioning for work-label */
+    height: 65vh;
+}
+
+.work-label {
+    width: 85%; /* Width of the label */
+    position: absolute; /* Positioning for bottom alignment */
+    bottom: 5vh; /* Align to bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center fix */
+    background: rgba(42, 42, 42, 0.7); /* Background with blur effect */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    color: #DAC5A7; /* Font color */
+    display: flex; /* Flexbox for h2s */
+    justify-content: space-between; /* Space between h2s */
+    padding: 10px; /* Padding around */
+    border-radius: 5px; /* Optional: for rounded corners */
+    box-shadow: 0 0 0 0.2px #DAC5A7; /* Simulated border effect */
+}
+.work-label h2{
+    font-size: 15px;
+}
+.work-circle-button {
+    width: 40px; /* Button width */
+    height: 40px; /* Button height */
+    background: rgba(218, 197, 167, 0.05); /* Button background */
+    box-shadow: 0 0 0 0.2px #DAC5A7; /* Simulated border effect */
+    border-radius: 50%; /* Make it circular */
+    display: flex; /* Flex for icon */
+    justify-content: center; /* Center icon */
+    align-items: center; /* Center icon */
+    cursor: pointer; /* Pointer cursor */
+    transition: background 0.3s; /* Transition for hover */
+}
+.work-button{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.work-circle-button i {
+    color: #DAC5A7; /* Icon color */
+    transition: transform 0.3s; /* Transition for hover */
+}
+
+/* Change the icon position on hover */
+.work-button:hover .work-circle-button i {
+    transform: translateX(10px); /* Move the icon right */
+}
+
+/* Link styling */
+.work-button a {
+    color: #DAC5A7; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin-left: 10px; /* Space between button and link */
+    align-self: center; /* Center vertically */
 }
