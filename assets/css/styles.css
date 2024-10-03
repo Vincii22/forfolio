@@ -1,0 +1,180 @@
+*{
+    list-style-type: none;
+    text-decoration: none;
+
+}
+body{
+    background: #0E0E0E;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+section {
+    margin-top: 80px; /* Adjust based on the height of your navigation */
+    padding: 10px; /* Adjust padding as needed */
+}
+/* Nav Section  */
+.nav {
+    width: 35%;
+    margin: 0 auto; /* Center the nav section */
+    position: fixed; /* Make the nav fixed */
+    top: 20px; /* Adjust as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center fix */
+    background: rgba(42, 42, 42, 0.5); /* Semi-transparent background color */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border: 1px solid #DAC5A7; /* Border color */
+    z-index: 1000; /* Ensure it's above other content */
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center vertically */
+}
+
+.logo a {
+    font-size: 1.5em; /* Adjust logo size */
+    color: #DAC5A7; /* Font color */
+    text-decoration: none; /* Remove underline */
+}
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Flex for the links */
+}
+
+.links li {
+    margin: 0 10px; /* Space between links */
+}
+
+.links a {
+    color: #DAC5A7; /* Font color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Transition for hover */
+}
+
+.links a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+.nav-button a {
+    background: #DAC5A7; /* Button background color */
+    color: #1D1E1F; /* Button font color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s; /* Transition for hover */
+}
+
+.nav-button a:hover {
+    background: #ffcc00; /* Change button background on hover */
+}
+
+/* Hero Section  */
+
+.hero {
+    display: block; /* Block layout */
+    text-align: center; /* Center text */
+    height: 100vh; /* Full viewport height for the hero section */
+}
+
+.hero-container {
+    max-width: 1000px; /* Optional: limit the width of the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.hero-image {
+    width: 55%; /* Image takes 35% of the width */
+    margin: 0 auto; /* Center the image */
+}
+
+.hero-image img {
+    width: 100%; /* Make the image responsive */
+    height: 45vh; /* Set the height of the image */
+    object-fit: cover; /* Cover the container without distortion */
+}
+.title{
+    width: 100%;
+}
+
+.title h1 {
+    width: 100%;
+    font-size: 100px; /* Use calc to simulate 20vh */
+    color: #DAC5A7; /* Title font color */
+}
+
+.sub-title {
+    font-size: 20px; /* Use calc to simulate 15vh */
+    color: #DAC5A7; /* Subtitle font color */
+    width: 100%;
+}
+
+/* SERVICE SECTION  */
+.services {
+    padding: 40px 0; /* Padding around the section */
+}
+
+.service-container {
+    display: flex; /* Flex for the container */
+    justify-content: center; /* Center the services */
+    gap: 35px; /* Space between service cards */
+}
+
+.service {
+    width: 17%; /* Width of each service */
+    background: rgba(218, 197, 167, 0.05); /* Background with transparency */
+    border: 1px solid #DAC5A7; /* Border color */
+    padding: 45px; /* Inner padding */
+    border-radius: 5px; /* Optional: rounded corners */
+    color: #DAC5A7; /* Font color */
+}
+
+.service-title h3 {
+    font-size: 20px; /* Title font size */
+    margin: 0; /* Remove margin */
+}
+
+.service-sub-title p {
+    font-size: 18px; /* Subtitle font size */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.service-button {
+    display: flex; /* Flex for button and link */
+    align-items: center; /* Center vertically */
+    gap: 35px; /* Space between service cards */
+}
+
+
+.circle-button {
+    width: 40px; /* Button width */
+    height: 40px; /* Button height */
+    background: rgba(218, 197, 167, 0.05); /* Button background */
+    border: 1px solid #DAC5A7; /* Button border color */
+    border-radius: 50%; /* Make it circular */
+    display: flex; /* Flex for icon */
+    justify-content: center; /* Center icon */
+    align-items: center; /* Center icon */
+    cursor: pointer; /* Pointer cursor */
+    transition: background 0.3s; /* Transition for hover */
+}
+
+.service-button a {
+    color: #DAC5A7; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 15px;
+}
+
+.circle-button i {
+    color: #DAC5A7; /* Icon color */
+    transition: transform 0.3s; /* Transition for hover */
+}
+
+/* Change the icon position on hover */
+.service-button:hover .circle-button i {
+    transform: translateX(10px); /* Move the icon right */
+}
