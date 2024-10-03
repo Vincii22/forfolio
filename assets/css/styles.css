@@ -20,7 +20,7 @@ section {
 }
 /* Nav Section  */
 .nav {
-    width: 35%;
+    width: 30%;
     margin: 0 auto; /* Center the nav section */
     position: fixed; /* Make the nav fixed */
     top: 20px; /* Adjust as needed */
@@ -52,7 +52,9 @@ nav {
 }
 
 .links li {
-    margin: 0 10px; /* Space between links */
+    margin: 5px 10px 0 0; /* Space between links */
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .links a {
