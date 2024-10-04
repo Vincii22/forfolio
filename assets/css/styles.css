@@ -30,7 +30,7 @@ section {
     backdrop-filter: blur(10px); /* Apply blur effect */
     box-shadow: 0 0 0 0.2px #DAC5A7; /* Simulated border effect */
     z-index: 1000; /* Ensure it's above other content */
-    border-radius: 5px; /* Optional: for rounded corners */
+    padding: 10px 60px 10px 60px;
 }
 
 nav {
@@ -68,7 +68,6 @@ nav {
     background: #DAC5A7; /* Button background color */
     color: #1D1E1F; /* Button font color */
     padding: 10px 20px; /* Button padding */
-    border-radius: 5px; /* Rounded corners */
     text-decoration: none; /* Remove underline */
     transition: background 0.3s; /* Transition for hover */
 }
@@ -131,7 +130,7 @@ nav {
 }
 
 .hero-image {
-    width: 55%; /* Image takes 35% of the width */
+    width: 60%; /* Image takes 35% of the width */
     margin: 0 auto; /* Center the image */
 }
 
